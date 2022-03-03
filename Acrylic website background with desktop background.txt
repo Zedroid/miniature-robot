@@ -1,0 +1,6 @@
+Window position JS 
+Lock on only background with obs
+https://github.com/WICG/file-system-access
+Take screenshots everytime window move and crop to window position
+
+
