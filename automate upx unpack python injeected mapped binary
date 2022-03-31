@@ -1,0 +1,3 @@
+https://infosecwriteups.com/how-to-unpack-upx-packed-malware-with-a-single-breakpoint-4d3a23e21332
+
+Because sometimes you might get UPX packed binary in the second or third stage of malware, mostly it will be memory injected and ‘mapped binary’ hence UPX tool will not work, but this is a discussion for another article.
