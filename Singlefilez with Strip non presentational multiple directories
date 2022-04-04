@@ -1,0 +1,2 @@
+snapshotted directories, rather than a single HTML
+post-process SingleFile's output to remove any HTML that wasn't contributing to the presentational render 
