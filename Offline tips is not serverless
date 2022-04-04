@@ -1,0 +1,5 @@
+https://github.com/richardtallent/vite-plugin-singlefile
+
+Bundling your entire site into one file certainly isn't recommended for most situations.
+
+However, this can be very handy for offline web applications--apps you can simply opeen the HTML file in your default web browser. Th
