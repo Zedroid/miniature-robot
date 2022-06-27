@@ -1,0 +1,8 @@
+https://greasyfork.org/en/scripts/425364-transparent-navigation-bar/code
+
+Replace with 
+const commonStyles = {
+        whiteBackgroundColor: 'rgba(0, 0, 3, 0.7)',
+        blackBackgroundColor: 'rgba(0, 0, 0, 0.7)',
+        backdropFilters: 'blur(50px) saturate(180%)',
+        background: 'rgb(0 0 0 / 78%)'
