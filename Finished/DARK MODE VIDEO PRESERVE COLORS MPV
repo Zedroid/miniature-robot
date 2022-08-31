@@ -1,0 +1,3 @@
+https://github.com/stax76/mpv.net/issues/488
+ I put this in input.conf and nothing in mpv.conf and toggling works
+k vf toggle lutyuv=y=negval
