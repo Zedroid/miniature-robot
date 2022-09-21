@@ -1,0 +1,50 @@
+//select lines
+// ALT + F11
+//Insert > Module
+//https://www.extendoffice.com/documents/word/5413-word-merge-multiple-lines.html
+
+Sub CleanUpPastedText()
+    Dim xSelection As Selection
+    On Error Resume Next
+    Application.ScreenUpdating = False
+Set xSelection = Application.Selection
+    If xSelection.Type <> wdSelectionIP Then
+        FindAndReplace xSelection
+    Else
+      If MsgBox("Do you want to merge all selected lines into one paragraph?", vbYesNo + vbInformation, "Kutools for Word") = vbNo Then Exit Sub
+      xSelection.WholeStory
+      Set xSelection = Application.Selection
+      xSelection.HomeKey wdStory
+      FindAndReplace xSelection
+    End If
+    Application.ScreenUpdating = True
+    Application.ScreenRefresh
+    MsgBox "The selected lines have been merged into one paragraph.", vbInformation, "Kutools for Word"
+End Sub
+Sub FindAndReplace(Sel As Selection)
+    With Sel.Find
+        .ClearFormatting
+        .Replacement.ClearFormatting
+        .Forward = True
+        .Wrap = wdFindStop
+        .Format = False
+        .MatchAllWordForms = False
+        .MatchSoundsLike = False
+        .MatchWildcards = True
+        .Text = "[^s^t]{1,}^13"
+        .Replacement.Text = "^p"
+        .Execute Replace:=wdReplaceAll
+        .Text = "([!^13])([^13])([!^13])"
+        .Replacement.Text = "\1 \3"
+        .Execute Replace:=wdReplaceAll
+        .Text = "[ ]{2,}"
+        .Replacement.Text = " "
+        .Execute Replace:=wdReplaceAll
+        .Text = "([a-z])-[ ]{1,}([a-z])"
+        .Replacement.Text = "\1 \2"
+        .Execute Replace:=wdReplaceAll
+        .Text = "[^13]{1,}"
+        .Replacement.Text = "^p"
+        .Execute Replace:=wdReplaceAll
+    End With
+End Sub
