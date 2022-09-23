@@ -1,0 +1,7 @@
+https://github.com/smplayer-dev/smplayer/issues/240#issuecomment-962429749
+Just realized something - since smplayer has a special case for YT it could incorporate thumbnail preview for YT only. YT provides nice
+
+"storyboards": {
+                    "playerStoryboardSpecRenderer": {
+                        "spec": "https://i.ytimg.com/sb/vTW-veuq-JA/storyboard3_L$L/$N.jpg.....
+in either 5x5 of 10x10 tilesets
