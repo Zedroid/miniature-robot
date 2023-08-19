@@ -1,0 +1,19 @@
+stop calculator multiple instances change hotkey default app 
+https://superuser.com/questions/1393830/i-want-to-replace-the-default-windows-10-calculator-with-calctape-exe-in-the-reg
+One method that isn't too invasive and can easily be undone is to use the Image File Execution Options Debugger key. This is the same method employed by Process Explorer when you replace Task Manager.
+If you typically run calc or calc.exe to launch the Calculator this will work:
+Launch Regedit
+Navigate to : HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options
+Create a new reg key called calc.exe under HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options.
+Create a new string value called Debugger.
+The data value can then be the path to your custom exe.
+A reg file export of such an update would look like the following if this is simpler to follow:
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image
+File Execution Options\Calc.exe]     
+"Debugger"="C:\\temp\\test.exe"
+
+This will work for the above scenario but then there are a number of ways to launch an application and this will not cover all of them.
+https://github.com/Qalculate/qalculate-qt/issues/93
+
+Qalculate comes with an option to disable multiple instances
+
