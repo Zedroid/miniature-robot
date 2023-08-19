@@ -1,0 +1,6 @@
+https://answers.microsoft.com/en-us/windows/forum/all/use-subfolders-for-background-in-windows-11/09643b12-c2c4-4922-8a47-91722e03a222
+I have found a solution, WIN + R and the command
+explorer shell:::{ED834ED6-4B5A-4bfe-8F11-A626DCB6A921} -Microsoft.Personalization\pageWallpaper
+opens the old background dialog, which is still available.
+https://www.youtube.com/watch?v=r_hOq2b4mjM
+
