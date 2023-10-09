@@ -1,0 +1,7 @@
+https://chrome.google.com/webstore/detail/incognito-or-not/bjgbcgencjbpjmghkipepgdmgpelenpg
+top left under extensions add ctrl q keyboard shortcut
+
+Kiwi browser launch incognito mode on startup
+1. Install shortcut maker app
+2. Add the 2nd shortcut maker widget by long pressing homescreen
+3. Replace class names with org.chromium.chrome.browser.incognito.IncognitoTabLauncher
