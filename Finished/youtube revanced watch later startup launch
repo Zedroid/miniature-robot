@@ -3,7 +3,7 @@ Launch watch later revanced extended on startup
 2. Add the 2nd shortcut maker widget by long pressing homescreen
 3. Fill in 3 forms uncheck new task flag
 
-Do not use open library at startup in revanced extended
+Set battery optimization to unrestricted 
 
 Code to copy:
 android.intent.action.VIEW
