@@ -1,0 +1,22 @@
+Launch watch later revanced extended on startup
+1. Install shortcut maker app
+2. Add the 2nd shortcut maker widget by long pressing homescreen
+3. Fill in 3 forms uncheck new task flag
+
+Do not use open library at startup in revanced extended
+
+Code to copy:
+android.intent.action.VIEW
+com.google.android.youtube.UrlActivity
+https://youtube.com/playlist?list=WL
+
+Action 
+android.intent.action.VIEW
+class name
+com.google.android.youtube.UrlActivity
+Data
+https://youtube.com/playlist?list=WL
+
+Replace MAIN shell$ homeactivity
+A blank form
+Flags set to NONE
